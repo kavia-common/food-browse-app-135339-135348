@@ -1,0 +1,15 @@
+#screen-home-1-49 {
+  width: 430px;
+  height: 932px;
+  background: var(--color-ffffff);
+  border-radius: var(--radius-35);
+  transform-origin: top left;
+}
+
+/* Optional helper: auto-scale down on narrow screens (preserving aspect ratio) */
+@media (max-width: 430px) {
+  #screen-home-1-49 {
+    transform: scale(calc(100vw / 430));
+    transform-origin: top left;
+  }
+}

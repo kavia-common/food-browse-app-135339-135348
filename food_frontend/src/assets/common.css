@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Lobster&family=Poppins:wght@500&family=Roboto:wght@500&display=swap');
+:root {
+  /* Color tokens from design_system */
+  --color-ffffff: #ffffff;
+  --color-3c2f2f: #3c2f2f;
+  --color-6a6a6a: #6a6a6a;
+  --color-d9d9d9: #d9d9d9;
+  --color-ef2a39: #ef2a39;
+  --color-f5f5f5: #f5f5f5;
+  --color-f3f4f6: #f3f4f6;
+  --color-000000: #000000;
+  --color-ff9633: #ff9633;
+
+  /* Typography tokens */
+  --typo-0-family: "Lobster", cursive;
+  --typo-0-size: 45px;
+  --typo-0-weight: 400;
+  --typo-0-line-height: 60.6094px;
+  --typo-0-letter-spacing: 0px;
+
+  --typo-1-family: "Poppins", sans-serif;
+  --typo-1-size: 18px;
+  --typo-1-weight: 500;
+  --typo-1-line-height: 27px;
+  --typo-1-letter-spacing: 0px;
+
+  --typo-2-family: "Roboto", sans-serif;
+  --typo-2-size: 18px;
+  --typo-2-weight: 500;
+  --typo-2-line-height: 21.09375px;
+  --typo-2-letter-spacing: 0px;
+
+  --typo-3-family: "Inter", sans-serif;
+  --typo-3-size: 16px;
+  --typo-3-weight: 500;
+  --typo-3-line-height: 19.363636px;
+  --typo-3-letter-spacing: 0px;
+
+  --typo-4-family: "Roboto", sans-serif;
+  --typo-4-size: 16px;
+  --typo-4-weight: 500;
+  --typo-4-line-height: 21.55px;
+  --typo-4-letter-spacing: 0px;
+
+  /* Aliases with color as specified in typography refs */
+  --typo-5-family: "Lobster", cursive;
+  --typo-5-size: 45px;
+  --typo-5-weight: 400;
+  --typo-5-line-height: 60.6094px;
+  --typo-5-color: var(--color-3c2f2f);
+
+  --typo-6-family: "Poppins", sans-serif;
+  --typo-6-size: 18px;
+  --typo-6-weight: 500;
+  --typo-6-line-height: 27px;
+  --typo-6-color: var(--color-6a6a6a);
+
+  --typo-7-family: "Roboto", sans-serif;
+  --typo-7-size: 18px;
+  --typo-7-weight: 500;
+  --typo-7-line-height: 21.09375px;
+  --typo-7-color: var(--color-3c2f2f);
+
+  --typo-8-family: "Inter", sans-serif;
+  --typo-8-size: 16px;
+  --typo-8-weight: 500;
+  --typo-8-line-height: 19.363636px;
+  --typo-8-color: var(--color-f5f5f5);
+
+  --typo-9-family: "Inter", sans-serif;
+  --typo-9-size: 16px;
+  --typo-9-weight: 500;
+  --typo-9-line-height: 19.363636px;
+  --typo-9-color: var(--color-6a6a6a);
+
+  --typo-10-family: "Inter", sans-serif;
+  --typo-10-size: 16px;
+  --typo-10-weight: 500;
+  --typo-10-line-height: 19.363636px;
+  --typo-10-color: var(--color-3c2f2f);
+
+  --typo-11-family: "Roboto", sans-serif;
+  --typo-11-size: 16px;
+  --typo-11-weight: 500;
+  --typo-11-line-height: 21.55px;
+  --typo-11-color: var(--color-3c2f2f);
+
+  /* Border radius tokens */
+  --radius-20: 20px;
+  --radius-35: 35px;
+
+  /* Shadows */
+  --shadow-0: 0px 4px 19px 0px rgba(0, 0, 0, 1);
+  --shadow-1: 0px 10px 18px -1px rgba(0, 0, 0, 1);
+  --shadow-2: 0px 6px 17px 0px rgba(0, 0, 0, 1);
+  --shadow-3: 0px 5px 16px 5px rgba(0, 0, 0, 1);
+
+  /* Root artboard size for scaling */
+  --screen-w: 430px;
+  --screen-h: 932px;
+}
+
+/* Base reset and container centering */
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-ffffff);
+  color: var(--color-3c2f2f);
+  height: 100%;
+  width: 100%;
+}
+.screen-wrap {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: var(--color-ffffff);
+}
+.screen {
+  position: relative;
+  width: var(--screen-w);
+  height: var(--screen-h);
+  background: var(--color-ffffff);
+  overflow: hidden;
+  border-radius: var(--radius-35);
+}
+
+/* Pixel-perfect absolute placement helper */
+.abs {
+  position: absolute;
+}
+.abs:focus {
+  outline: none;
+}
+
+/* Style references mapped to utility classes (from styles section) */
+.bg-style-0 { background: var(--color-ffffff); border-radius: var(--radius-35); }
+.bg-style-1 { background: var(--color-3c2f2f); }
+.bg-style-2 { background: var(--color-6a6a6a); }
+.bg-style-3 { background: var(--color-d9d9d9); border-radius: var(--radius-20); }
+.bg-style-4 { background: var(--color-ffffff); border-radius: var(--radius-20); }
+.bg-style-5 { background: var(--color-ef2a39); border-radius: var(--radius-20); }
+.bg-style-6 { background: var(--color-ffffff); }
+.bd-style-14 { border: 5px solid var(--color-ffffff); }
+.bg-style-8 { background: var(--color-f5f5f5); }
+.bg-style-9 { background: var(--color-f3f4f6); border-radius: var(--radius-20); }
+.bg-style-10 { background: var(--color-000000); }
+.bg-style-11 { background: var(--color-ff9633); }
+.bg-style-12 { background: var(--color-ef2a39); }
+.bg-style-13 { background: var(--color-d9d9d9); }
+/* with shadows */
+.bg-style-15 { background: var(--color-ffffff); border-radius: var(--radius-20); box-shadow: var(--shadow-0); }
+.bg-style-16 { background: var(--color-ef2a39); border-radius: var(--radius-20); box-shadow: var(--shadow-1); }
+.bg-style-17 { background: var(--color-ffffff); border-radius: var(--radius-20); box-shadow: var(--shadow-2); }
+.bg-style-18 { background: var(--color-ef2a39); box-shadow: var(--shadow-3); }
+
+/* Typography utility classes */
+.typo-5 { font-family: var(--typo-5-family); font-size: var(--typo-5-size); font-weight: var(--typo-5-weight); line-height: var(--typo-5-line-height); color: var(--typo-5-color); letter-spacing: 0; }
+.typo-6 { font-family: var(--typo-6-family); font-size: var(--typo-6-size); font-weight: var(--typo-6-weight); line-height: var(--typo-6-line-height); color: var(--typo-6-color); letter-spacing: 0; }
+.typo-7 { font-family: var(--typo-7-family); font-size: var(--typo-7-size); font-weight: var(--typo-7-weight); line-height: var(--typo-7-line-height); color: var(--typo-7-color); letter-spacing: 0; }
+.typo-8 { font-family: var(--typo-8-family); font-size: var(--typo-8-size); font-weight: var(--typo-8-weight); line-height: var(--typo-8-line-height); color: var(--typo-8-color); letter-spacing: 0; }
+.typo-9 { font-family: var(--typo-9-family); font-size: var(--typo-9-size); font-weight: var(--typo-9-weight); line-height: var(--typo-9-line-height); color: var(--typo-9-color); letter-spacing: 0; }
+.typo-10 { font-family: var(--typo-10-family); font-size: var(--typo-10-size); font-weight: var(--typo-10-weight); line-height: var(--typo-10-line-height); color: var(--typo-10-color); letter-spacing: 0; }
+.typo-11 { font-family: var(--typo-11-family); font-size: var(--typo-11-size); font-weight: var(--typo-11-weight); line-height: var(--typo-11-line-height); color: var(--typo-11-color); letter-spacing: 0; }
+
+/* Generic icon placeholder (vector shapes) using currentColor for flexibility */
+.icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: var(--color-3c2f2f);
+}
+
+/* Responsive scale for smaller viewports to preserve pixel-perfect layout */
+@media (max-width: 430px) {
+  .screen {
+    transform-origin: top left;
+    width: 430px;
+    height: 932px;
+  }
+  .screen-wrap {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  body, html, .screen-wrap {
+    overflow-x: hidden;
+  }
+}
